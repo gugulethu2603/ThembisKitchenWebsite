@@ -236,3 +236,62 @@ footer {
 .contact-info-list li:last-child {
     border-bottom: none;
 }
+
+==========================================================================
+   MENU GRID COLUMN PRESENTATION ARCHITECTURE (Requirement Section 2.4)
+   ========================================================================== */
+.menu-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Splitting the space into 2 side-by-side columns */
+    gap: 3.5rem;                   /* Spacing gap between the columns */
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    align-items: start;
+}
+
+/* Individual food card wrapper box layouts */
+.menu-item {
+    display: flex;
+    gap: 1.5rem;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #eef2f3;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    margin-bottom: 1.5rem;
+    align-items: center;
+}
+
+.menu-item-img {
+    flex: 0 0 140px;
+    width: 140px;
+    height: 110px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.item-details h3 {
+    font-size: 1.35rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.menu-item-price {
+    display: inline-block;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #d35400;
+    background-color: #fdf2e9;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+}
+
+/* Collapses columns vertically to support smaller touch screens */
+@media (max-width: 768px) {
+    .menu-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}

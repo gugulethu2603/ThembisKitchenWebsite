@@ -1,49 +1,63 @@
 <!DOCTYPE html>
 
 <html lang="en">
+	<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THEMBI'S KITCHEN</title>
+    <!-- Section 2.1: Linking the external CSS Style Sheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
 <body>
-		<!--Main header displaying the food stall name -->
+<!--Main header displaying the food stall name -->
 <header>
+	<div class="hearder-container">
 	<h1> THEMBI'S KITCHEN</h1>
-  <nav>
 	<!-- Navigation bar separating different menu links with pipe dividers -->
-	<a href="index.html">INDEX</a> | 
-            <a href="aboutUs.html">ABOUT US</a> | 
-            <a href="services.html">SERVICES</a> | 
-            <a href="contactUs.html">CONTACT US</a> | 
-            <a href="inquiry.html">INQUIRY</a>
-</nav>
+
+  <nav>
+		<ul>
+			<li><a href="index.html">INDEX</a></li>
+            <li><a href="aboutUs.html">ABOUT US</a></li> 
+            <li><a href="services.html">SERVICES</a></li> 
+            <li><a href="contactUs.html" class="active">CONTACT US</a></li>
+            <li><a href="inquiry.html">INQUIRY</a></li>
+		</ul>
+	</nav>
+	</div>
 </header>
 
-	<!--Main page content container-->
-<main>
+	<!--Main wrapper for the columns built with CSS Grid layout-->
+<main class ="page-layout-grid info-page-padding">
 
-	<!--Section titles for the contact page-->
-	<h2>Contact</h2>
-	<h1>US NOW</h1>
+	<!--Left column: contact details-->	
+
+	<section class="contact-main-contect">
+	<h2>Contact Us Now</h2>
+
 	
 	<!--Phone contact detail block-->
 	
-	<div>
-	   <p>📞Phone: +27 73 953 7805</p>
+	<div class="menu-card-item lunch-card">
+	<div class="menu-item-details">
+	<h3>Get In Touch</h3>
+	<p class="menu-item-description">Have a collection query, order adjustments, or want to verify our daily specials?
+		Use any of our channels below:</p>
+	
+	<ul class="contact-info-list">
+		<li><strong>📞Phone:</strong>+27 73 953 7805</li>
+		<li><strong>📧E-mail:</strong>info@thembiskitchen.co.za</li>
+		<li><strong>🌐Website:</strong>www.thembiskitchen.co.za</li>
+		<li><strong>📍Address:</strong>Daveyton Taxi Rank(Skwereni)</li>
+		</ul>
+		</div>
+		</div>
+		</section>
 
-	</div>
 
-	<!--Email contact detail block-->
-	<div>
-	   <p>📧Email: info@thembiskitchen.co.za</p>
-	</div>
-				<!--Website URL block-->
 
-	<div>
-	   <p>🌐Website: www.thembiskitchen.co.za</p>
-	</div>
-				<!--Physical address location block-->
-
-	<div>
-	   <p>📍 Address: Daveyton Taxi Rank, Skwereni, Daveyton</p>
-	</div>
+	
 
 	<ul>
 

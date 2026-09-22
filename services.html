@@ -1,19 +1,32 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
+	<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THEMBI'S KITCHEN</title>
+    <!-- Section 2.1: Linking the external CSS Style Sheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
 <body>
-		<!--Main header displaying the food stall name -->
+			<!--Main header displaying the food stall name -->
 <header>
+	<div class="hearder-container">
 	<h1> THEMBI'S KITCHEN</h1>
+	<!-- Navigation bar separating different menu links with pipe dividers -->
+
   <nav>
-<!-- Navigation bar separating different menu links with pipe dividers -->
-	<a href="index.html">INDEX</a> | 
-            <a href="aboutUs.html">ABOUT US</a> | 
-            <a href="services.html">SERVICES</a> | 
-            <a href="contactUs.html">CONTACT US</a> | 
-            <a href="inquiry.html">INQUIRY</a>
-</nav>
+		<ul>
+			<li><a href="index.html">INDEX</a></li>
+            <li><a href="aboutUs.html">ABOUT US</a></li> 
+            <li><a href="services.html" class ="active">SERVICES</a></li> 
+            <li><a href="contactUs.html">CONTACT US</a></li>
+            <li><a href="inquiry.html">INQUIRY</a></li>
+		</ul>
+	</nav>
+	</div>
 </header>
+
 <main>
 	<h2 class="menu-title"> Breakfast Cakes Menu & Hot Beverages</h2>
 	<!-- The main wrapper for the two columns-->

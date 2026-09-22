@@ -1,48 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THEMBI'S KITCHEN</title>
+    <!-- Section 2.1: Linking the external CSS Style Sheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
 <body>
+	<!--Main header displaying the food stall name -->
 <header>
+	<div class="hearder-container">
 	<h1> THEMBI'S KITCHEN</h1>
+	<!-- Navigation bar separating different menu links with pipe dividers -->
+
   <nav>
-	<a href="index.html">INDEX</a> | 
-            <a href="aboutUs.html">ABOUT US</a> | 
-            <a href="services.html">SERVICES</a> | 
-            <a href="contactUs.html">CONTACT US</a> | 
-            <a href="inquiry.html">INQUIRY</a>
-</nav>
+		<ul>
+			<li><a href="index.html">INDEX</a></li>
+            <li><a href="aboutUs.html" class="active">ABOUT US</a></li> 
+            <li><a href="services.html">SERVICES</a></li> 
+            <li><a href="contactUs.html">CONTACT US</a></li>
+            <li><a href="inquiry.html">INQUIRY</a></li>
+		</ul>
+	</nav>
+	</div>
 </header>
 
-<main>
-	<h1> About Us</h1>
-	<h2> Organisation Overview</h2>
-
-	<div>
+<main class="page-layout-grid info-page-padding">
+	<section class="about-main-content">
+	<h2> About Us</h2>
+	<article class="content-block">
+	<h3> Organisation Overview</h3>
+	
 	<p><strong>Thembi's kitchen</strong> is an informal catering stall based at a local taxi rank in Daveyton. We serve with convenient, everyday meals 
 					for commuters, taxi drivers, and nearby workers.</p>
-	</div>
+	</article>
+	  
 
 		<!-- Offerings section detailing service variation -->
-	<div>
+	<article class ="content-block">
 	<h3> Our daily Offerings</h3>
 	<p> In the mornings,the business sells freshly baked scones for breakfast on the go. In the afternoons,it prepares full traditional plates of warm
 	    food for customers who need quick, filling meals.</p>
-	</div>
+	</article>
+	</section>
 
 		<!-- Business purpose and vision section-->
-	<div>
-	<h3>Our Mission and Motivation</h3>
+	<section class="about-sidebar">
+	<div class="side-barcard">
+	<h4>Our Mission and Motivation</h4>
 	<p>As a thriving local micro-enterprise that currently depends on foot traffic and our central location at the taxi rank, this website serves as our
 	   digital storefront to better connect with our community by:</p>
 		
 		<!--List of key business motivations and goals-->
 
-	<ul>
+	<ul class ="bullet-list">
 	<li><strong>Overcoming location limits:</strong>Allowing nearby mall workers and other customers to view our food options and place orders easily.</li>
 	<li><strong>Pre-ordering and convenience:</strong> Saving Precious time for commuters with limited schedules by letting them pre-order morning scones or 		afternoon meals to reduce waiting times.</li>
 	<li><strong>Catering opportunities:</strong>Opening online visibility to help Thembi's Kitchen attract bulk orders from local families, events and small  		   business in Daveyton.</li>
 	</ul>
 	</div>
+	</section>
 	</main>
 
 

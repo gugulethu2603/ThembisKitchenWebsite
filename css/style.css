@@ -1,6 +1,6 @@
 /* ==========================================================================
-   1. CSS RESET & INITIALIZATION 
-   */
+   1. CSS RESET & BROWSER RENDERING CONSISTENCY
+   ========================================================================== */
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -14,24 +14,24 @@ html, body {
 
 img {
     display: block;
+    max-width: 100%;
 }
 
 /* ==========================================================================
-   2. TYPOGRAPHY SCALES & CASCADING PROPERTIES 
-    */
+   2. GLOBAL BRAND TYPOGRAPHY & BASE COLORS
+   ========================================================================== */
 body {
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
     font-size: 16px;
-    background-color: #eeebec; /* Light warm background theme color */
-    color: #2c3e50;            /* Primary dark neutral text color */
-    line-height: 1.6;          /* Explicit line height rule */
+    background-color: #fdfbfc; /* Warm light palette tint */
+    color: #2c3e50;            /* Professional deep contrast text color */
+    line-height: 1.6;          
 }
 
-/* Proportional Heading Scales */
 h1 {
     font-size: 1.8rem;
     font-weight: 700;
-    letter-spacing: 1px;       /* Custom letter-spacing rule */
+    letter-spacing: 1px;       /* Proportional letter-spacing layout metric */
 }
 
 h2 {
@@ -53,39 +53,40 @@ h3 {
 h4 {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #d35400; /* Warm culinary accent brand color */
+    color: #d35400;             /* Brand accent culinary orange */
     margin-bottom: 1rem;
 }
 
-/* ==========================================================================
-   3. DESKTOP FLEXBOX & GRID ARCHITECTURE
-    */
+p {
+    font-size: 1.15rem;
+    color: #555;
+}
 
-/* Flexbox Header Container Layout */
+/* ==========================================================================
+   3. UNIFIED NAVIGATION HEADER (Flexbox Alignment)
+   ========================================================================== */
 header {
     background-color: #ffffff;
-    border-bottom: 4px solid #d35400; /* Visual layout element: Border accent */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Visual layout element: Shadow box */
+    border-bottom: 4px solid #d35400; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); 
 }
 
 .header-container {
-    display: flex;                  /* Flexbox active display layout rule */
-    flex-direction: row;            /* Direction tracking alignment property */
-    justify-content: space-between; /* Space out title and links */
-    align-items: center;            /* Center alignment vertically */
+    display: flex;                  
+    flex-direction: row;            
+    justify-content: space-between; 
+    align-items: center;            
     max-width: 1200px;
     margin: 0 auto;
     padding: 1.25rem 2rem;
 }
 
-/* Flexbox Navigation Items */
 nav ul {
     list-style: none;
     display: flex;
     gap: 1.5rem;
 }
 
-/* Interactive Link Element Pseudo-Classes (Requirement 2.5) */
 nav ul li a {
     text-decoration: none;
     color: #34495e;
@@ -93,165 +94,72 @@ nav ul li a {
     font-size: 0.9rem;
     padding: 0.5rem 0.75rem;
     border-radius: 4px;
+    text-transform: uppercase;
     transition: all 0.2s ease-in-out;
 }
 
 nav ul li a:hover {
     color: #d35400;
-    background-color: #fdf2e9; /* Visual feedback color state switch on hover */
+    background-color: #fdf2e9; 
 }
 
 nav ul li a:focus {
-    outline: 2px dashed #d35400; /* Accessibility visual element on keyboard focus tab track */
+    outline: 2px dashed #d35400; 
     outline-offset: 4px;
 }
 
 nav ul li a:active, nav ul li a.active {
     color: #ffffff;
-    background-color: #d35400;  /* Active / Selected page visual feedback tracking element */
+    background-color: #d35400;  
 }
 
-/* Main Display Layout Area Grid Mapping Assignment Constraints */
-.page-layout-grid {
-    display: grid;                  /* Active structural CSS Grid declaration */
-    max-width: 1200px;
-    margin: 4rem auto;
-    padding: 0 2rem;
-    grid-template-columns: 2fr 1fr; /* Defines 2 specific tracking spatial layouts columns */
-    grid-template-areas: "intro hours";
-    gap: 4rem;
-}
-
-.intro-content {
-    grid-area: intro;
-}
-
-.hours-content {
-    grid-area: hours;
-    background-color: #ffffff;
-    padding: 2rem;
-    border-radius: 8px;
-    border: 1px solid #eef2f3;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
-    align-self: start;
-}
-
-/* Operating Hours Presentation Setup Elements */
-.hours-content ul {
-    list-style: none;
-}
-
-.hours-content ul li {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.6rem 0;
-    border-bottom: 1px dashed #eef2f3;
-    font-size: 1.05rem;
-}
-
-.hours-content ul li span {
-    font-weight: 600;
-}
-
-.hours-content ul li .closed {
-    color: #e74c3c; /* Highlights closed days elegantly in soft primary red tint palette text */
-}
-
-/* Fluid Proportional Scaling Showcase Image Wrapper Layout Frame */
-.image-wrapper {
-    width: 100%;
-}
-
-.responsive-stall-img {
-    width: 100%;
-    max-width: 650px;
-    height: auto; /* Maintains clean proportional image aspect ratio constraints when sizing down */
-    border-radius: 8px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-}
-
-/* Contrasting Structural Layout Footers */
-footer {
-    background-color: #2c3e50;
-    color: #ffffff;
+/* ==========================================================================
+   4. CENTRAL RESPONSIVE GRID LAYOUT ARCHITECTURE (.menu-container)
+   ========================================================================== */
+.menu-title {
     text-align: center;
-    padding: 1.5rem;
-    margin-top: 5rem;
-    font-size: 0.9rem;
-    letter-spacing: 0.5px;
-}
-
-/* ==========================================================================
-   4. RESPONSIVE MEDIA BREAKPOINTS 
-   */
-
-/* Collapses layout properties seamlessly when window screen width passes under 768px */
-@media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-        gap: 1.25rem;
-        text-align: center;
-    }
-
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.75rem;
-    }
-
-    /* Redefines grid map structure into a singular content vertical tracking column */
-    .page-layout-grid {
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-            "intro"
-            "hours";
-        gap: 2.5rem;
-        margin: 2rem auto;
-    }
-
-    h2 {
-        font-size: 2rem;
-    }
-
-    h3 {
-        margin-bottom: 1.5rem;
-    }
-}
-
-/* ==========================================================================
-   10. CONTACT PAGE LAYOUT SPACING UTILITIES
-    */
-.contact-info-list {
-    list-style: none;
-    margin-top: 1rem;
-}
-
-.contact-info-list li {
-    font-size: 1.15rem;
+    font-size: 2.2rem;
     color: #2c3e50;
-    padding: 0.6rem 0;
-    border-bottom: 1px dashed #eef2f3;
+    margin: 3rem auto 1rem auto;
+    font-weight: 800;
 }
 
-.contact-info-list li:last-child {
-    border-bottom: none;
-}
-
-/* ========================================================================== 
-   MENU GRID COLUMN PRESENTATION 
- */
-  
 .menu-container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Splitting the space into 2 side-by-side columns */
-    gap: 3.5rem;                   /* Spacing gap between the columns */
+    grid-template-columns: 1fr 1fr; /* Activates two side-by-side equal columns */
+    gap: 3.5rem;                   
     max-width: 1200px;
-    margin: 2rem auto;
+    margin: 2rem auto 5rem auto;
     padding: 0 2rem;
     align-items: start;
 }
 
-/* Individual food card wrapper box layouts */
+/* Column Header Dynamic Badges */
+.left-menu::before {
+    content: "Breakfast Items";
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #d35400;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #fdf2e9;
+    padding-bottom: 0.5rem;
+}
+
+.right-menu::before {
+    content: "Lunch Items (Served from 11:00 AM)";
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #eef2f3;
+    padding-bottom: 0.5rem;
+}
+
+/* ==========================================================================
+   5. PRESENTATION ITEM CARDS
+   ========================================================================== */
 .menu-item {
     display: flex;
     gap: 1.5rem;
@@ -262,6 +170,16 @@ footer {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
     margin-bottom: 1.5rem;
     align-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.lunch-card {
+    border-left: 4px solid #2c3e50; 
 }
 
 .menu-item-img {
@@ -272,33 +190,71 @@ footer {
     object-fit: cover;
 }
 
+.item-details {
+    flex: 1;
+}
+
 .item-details h3 {
-    font-size: 1.35rem;
+    font-size: 1.25rem;
     color: #2c3e50;
+    margin-bottom: 0.25rem;
+}
+
+.item-details p {
+    font-size: 0.95rem;
+    color: #7f8c8d;
     margin-bottom: 0.5rem;
 }
 
 .menu-item-price {
     display: inline-block;
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     font-weight: 700;
     color: #d35400;
     background-color: #fdf2e9;
-    padding: 0.25rem 0.5rem;
+    padding: 0.2rem 0.6rem;
     border-radius: 4px;
-    margin-top: 0.5rem;
 }
 
-/* Collapses columns vertically to support smaller touch screens */
-@media (max-width: 768px) {
-    .menu-container {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-}
 /* ==========================================================================
-   INQUIRY FORM DESIGN & PSEUDO-CLASSES
-    */
+   6. CONTACT & ABOUT SPECIFIC CONTENT UTILITIES
+   ========================================================================== */
+.sidebar-card {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid #eef2f3;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.contact-subtitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #7f8c8d;
+    margin-top: -0.5rem;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+}
+
+.contact-info-list {
+    list-style: none;
+    margin-top: 1.25rem;
+}
+
+.contact-info-list li {
+    font-size: 1.15rem;
+    color: #2c3e50;
+    padding: 0.75rem 0;
+    border-bottom: 1px dashed #eef2f3;
+}
+
+.contact-info-list li:last-child {
+    border-bottom: none;
+}
+
+/* ==========================================================================
+   7. INQUIRY USER INTERACTIVE FORM UI ELEMENTS (Requirement 2.5)
+   ========================================================================== */
 .styled-form-container {
     background-color: #ffffff;
     padding: 2rem;
@@ -331,10 +287,10 @@ footer {
     transition: all 0.25s ease-in-out;
 }
 
-/* Interactive focus glow highlight selector rule */
+/* Focus interactive pseudo-classes rule */
 .form-group input:focus, .form-group textarea:focus {
     outline: none;
-    border-color: #d35400; /* brand culinary accent orange */
+    border-color: #d35400; 
     background-color: #ffffff;
     box-shadow: 0 0 0 3px rgba(211, 84, 0, 0.1);
 }
@@ -360,4 +316,62 @@ footer {
 
 .form-submit-btn:active {
     transform: scale(0.98);
+}
+
+.bullet-list {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.bullet-list li {
+    font-size: 1rem;
+    padding: 0.4rem 0;
+    color: #555;
+}
+
+/* ==========================================================================
+   8. UNIFIED GLOBAL LAYOUT FOOTER
+   ========================================================================== */
+footer {
+    background-color: #2c3e50;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 5rem;
+    font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   9. MOBILE RESPONSIVE MEDIA VIEWPORTS (Requirement Section 3.1)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 1.25rem;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem;
+    }
+
+    .menu-container {
+        grid-template-columns: 1fr; /* Stacks layout fields cleanly down single vertical columns */
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+
+    .menu-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.25rem;
+    }
+
+    .menu-item-img {
+        flex: 1;
+        width: 100%;
+        height: 150px;
+    }
 }

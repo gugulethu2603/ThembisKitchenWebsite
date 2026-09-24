@@ -1,0 +1,311 @@
+css/* ==========================================================================
+   1. CSS RESET & BROWSER RENDERING CONSISTENCY
+   ========================================================================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* ==========================================================================
+   2. REFINED DESIGN SCALES & CONTRAST
+   ========================================================================== */
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    background-color: #fdfbfc; /* Clean premium off-white canvas backdrop */
+    color: #2c3e50;            /* Professional deep charcoal gray text */
+    line-height: 1.6;          
+}
+
+h1 {
+    font-size: 1.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;       
+    color: #c0392b;            /* Classic deep crimson tone */
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #2c3e50;            
+    letter-spacing: -0.5px;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: #7f8c8d;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #c0392b; 
+    margin-bottom: 1.25rem;
+    border-bottom: 2px solid #eef2f3;
+    padding-bottom: 0.5rem;
+}
+
+p {
+    font-size: 1.15rem;
+    color: #555555;
+}
+
+/* ==========================================================================
+   3. UNIFIED NAVIGATION BAR BAR (Flexbox Model Layout)
+   ========================================================================== */
+header {
+    background-color: #ffffff;
+    border-bottom: 4px solid #c0392b; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); 
+}
+
+.header-container {
+    display: flex;                  
+    flex-direction: row;            
+    justify-content: space-between; 
+    align-items: center;            
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.25rem 2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #34495e;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #c0392b;
+    background-color: #fff0f1; 
+}
+
+nav ul li a.active {
+    color: #ffffff;
+    background-color: #c0392b;  
+}
+
+/* ==========================================================================
+   4. CENTRAL RESPONSIVE GRID LAYOUT ARCHITECTURE (.page-layout-grid)
+   ========================================================================== */
+.menu-title, .page-main-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin: 3rem auto 1rem auto;
+    font-weight: 800;
+}
+
+/* Forces index, contact, and about pages into a neat dual column layout */
+.page-layout-grid, .menu-container, .about-grid-matrix {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; /* Placed side-by-side cleanly */
+    gap: 4rem;                   
+    max-width: 1200px;
+    margin: 2rem auto 5rem auto;
+    padding: 0 2rem;
+    align-items: start;
+}
+
+/* ==========================================================================
+   5. HOUSING PANEL CARDS & PRESENTATION LAYOUT FRAMES
+   ========================================================================== */
+.menu-item, .sidebar-card, .hours-content, .modern-about-card, .intro-content {
+    background-color: #ffffff;
+    padding: 2.25rem;
+    border-radius: 8px;
+    border: 1px solid #eef2f3;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
+}
+
+.lunch-card {
+    border-left: 4px solid #c0392b; 
+}
+
+/* Fluid Proportional Showcase Media Image Wrappers */
+.hero-image-giant-frame, .menu-image-frame, .image-wrapper {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.giant-hero-img, .menu-item-img, .responsive-stall-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* ==========================================================================
+   6. HOURLY TIMETABLE UTILITY & TEXT LABELS (Index & Contact Lists)
+   ========================================================================== */
+.hours-content ul, .contact-info-list, .bullet-list {
+    list-style: none;
+}
+
+.hours-content ul li, .contact-info-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px dashed #eef2f3;
+    font-size: 1.1rem;
+    color: #2c3e50; /* Unified professional gray colors (Green Removed completely) */
+}
+
+.hours-content ul li:last-child, .contact-info-list li:last-child {
+    border-bottom: none;
+}
+
+.hours-content ul li strong, .contact-info-list li strong {
+    font-weight: 600;
+}
+
+/* Untouched About Us specific bullet indicators */
+.bullet-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+}
+
+.bullet-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #c0392b;
+    font-size: 1.4rem;
+}
+
+.menu-item-price {
+    display: inline-block;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #c0392b;
+    background-color: #fff0f1;
+    padding: 0.25rem 0.65rem;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+}
+
+/* ==========================================================================
+   7. INQUIRY PAGE ROBUST CARD & BOLD INPUT BORDERS (Requirement 2.5)
+   ========================================================================== */
+.styled-form-container {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 8px;
+    border: 3px solid #2c3e50; /* Nice big bold border casing frame */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.03);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.form-group label {
+    font-weight: 700;
+    color: #2c3e50;
+    font-size: 1rem;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    font-family: inherit;
+    font-size: 1.05rem;
+    border: 2px solid #dcdde1; /* High contrast visible field line borders */
+    border-radius: 4px;
+    background-color: #fcfbfa;
+    transition: all 0.25s ease-in-out;
+}
+
+/* Interactive Input Focus highlight parameter tracker */
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #c0392b; /* Highlights in deep crimson border on active focus track */
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(192, 57, 43, 0.1);
+}
+
+.form-submit-btn {
+    background-color: #c0392b;
+    color: #ffffff;
+    border: none;
+    padding: 0.95rem 2.5rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s ease;
+}
+
+.form-submit-btn:hover {
+    background-color: #962d22;
+}
+
+/* ==========================================================================
+   8. STRUCTURAL SITE FOOTER
+   ========================================================================== */
+footer {
+    background-color: #2c3e50;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 6rem;
+    font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   9. MOBILE RESPONSIVE ADAPTATIONS (Requirement Section 3.1)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 1.25rem;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem;
+    }
+
+    .page-layout-grid, .menu-container, .about-grid-matrix {
+        grid-template-columns: 1fr; /* Stacks side columns cleanly into layout rows on small viewports */
+        gap: 2.5rem;
+        margin: 2rem auto;
+    }
+}

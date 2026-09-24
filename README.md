@@ -76,3 +76,24 @@ The website will also require:
 
 ## Author
 Gugulethu Lebyane
+
+markdown
+
+---
+
+## Part 2 Evaluation Addendum
+
+### 1. Part 1 Feedback Evaluation Changelog
+*   **CSS Normalization Reset Engine**: Implemented an explicit universal box-sizing box reset parameter alongside comprehensive zero-margin parameters to remove varying browser default spacing inconsistencies.
+*   **Proportional Text Scale Constraints**: Standardized proportional headline scaling parameters across all section titles using explicit letter-spacing, tracking, and predictable line heights instead of unconfigured default text structures.
+*   **Decoupled Layout Formatting Layering**: Systematically extracted legacy inline layout dependencies (such as absolute string pipe layout characters and hardcoded width constraints) to employ semantic Flexbox row axes and CSS Grid columns.
+
+### 2. Screen Responsiveness Verification Breaking Metrics
+*   **Desktop View**: Displays balanced, side-by-side split matrices for main showcase cards, custom menu columns, and sidebar widgets.
+*   **Tablet View**: Dynamically compresses layout spacing fields to protect interface touch target scales on mid-size viewport dimensions.
+*   **Mobile View**: Collapses grid templates seamlessly at a 768px screen breakpoint into clean, singular vertical rows optimized for easy one-handed touch interactions.
+
+### 3. Academic Reference List (IIE Harvard Format)
+*   Coyier, C. 2024. *A Complete Guide to Flexbox*. Available at: https://css-tricks.com [Accessed 25 September 2026].
+*   House, K. 2023. *A Complete Guide to CSS Grid*. Available at: https://css-tricks.com [Accessed 25 September 2026].
+*   MDN Web Docs. 2026. *CSS: Cascading Style Sheets*. Mozilla Developer Network. Available at: https://mozilla.org [Accessed 25 September 2026].

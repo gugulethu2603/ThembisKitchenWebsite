@@ -1,79 +1,83 @@
-<!DOCTYPE html>
-<html lang="en"><head>
-    	<head>
+!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THEMBI'S KITCHEN</title>
-    <!-- Section 2.1: Linking the external CSS Style Sheet -->
+    <title>THEMBI'S KITCHEN — Inquiry</title>
+    <!-- Section 2.1: Linking to your central external stylesheet folder -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-
-
-    <title>Inquiry Form - Thembi's Kitchen</title>
-    
-</head>
 <body>
-<!--Main header displaying the food stall name -->
-<header>
-	<div class="header-container">
-	<h1> THEMBI'S KITCHEN</h1>
-	<!-- Navigation bar separating different menu links with pipe dividers -->
 
-  <nav>
-		<ul>
-			<li><a href="index.html">INDEX</a></li>
-            <li><a href="aboutUs.html" class=>ABOUT US</a></li> 
-            <li><a href="services.html">SERVICES</a></li> 
-            <li><a href="contactUs.html">CONTACT US</a></li>
-            <li><a href="inquiry.html"class="active">INQUIRY</a></li>
-		</ul>
-	</nav>
-	</div>
-</header>
+    <!-- Main header displaying the food stall name -->
+    <header>
+        <div class="header-container">
+            <h1>THEMBI'S KITCHEN</h1>
+            
+            <!-- Navigation bar separating different menu links -->
+            <nav>
+                <ul>
+                    <li><a href="index.html">INDEX</a></li>
+                    <li><a href="aboutUs.html">ABOUT US</a></li>
+                    <li><a href="services.html">SERVICES</a></li>
+                    <li><a href="contactUs.html">CONTACT US</a></li>
+                    <li><a href="inquiry.html" class="active">INQUIRY</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <!-- Main semantic content container displaying the central form wireframe -->
-    <main class="form-container">
-        <!-- Subheading identifying the primary objective of this webpage -->
-        <h2>INQUIRY FORM PAGE</h2>
+    <!-- Main wrapper for the columns built with our CSS Grid layout -->
+    <main>
+        <h2 class="menu-title">Catering & Bulk Inquiry</h2>
         
-        <!-- Interactive form element handling user inputs securely -->
-        <form action="#" method="POST">
+        <!-- Shared layout container splitting the form and sidebar side-by-side -->
+        <div class="menu-container">
             
-            <!-- Form field row block for the customer's full name -->
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
+            <!-- LEFT COLUMN: Interactive User Form Input Section -->
+            <section class="inquiry-form-section">
+                <form action="#" method="POST" class="styled-form-container">
+                    
+                    <div class="form-group">
+                        <label for="username">Your Full Name:</label>
+                        <input type="text" id="username" name="username" placeholder="Enter your full name" required>
+                    </div>
 
-            <!-- Form field row block for the primary telephone or contact details -->
-            <div class="form-group">
-                <label for="phone">Contact Number:</label>
-                <input type="tel" id="phone" name="phone" required>
-            </div>
+                    <div class="form-group">
+                        <label for="useremail">Email Address:</label>
+                        <input type="email" id="useremail" name="useremail" placeholder="name@example.com" required>
+                    </div>
 
-            <!-- Form field row block for email address data entry -->
-            <div class="form-group">
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
+                    <div class="form-group">
+                        <label for="inquiringtext">Your Inquiry Details:</label>
+                        <textarea id="inquiringtext" name="inquiringtext" rows="6" placeholder="Tell us how many scones, cupcakes, or traditional lunch platters you would like to book for your function..." required></textarea>
+                    </div>
 
-            <!-- Form field row block for long-form user inquiries or text notes -->
-            <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-            </div>
+                    <button type="submit" class="form-submit-btn">Submit Inquiry</button>
+                </form>
+            </section>
 
-            <!-- Bottom action submission row centered block -->
-            <div class="form-submit">
-                <button type="submit">[ SUBMIT ]</button>
-            </div>
-            
-        </form>
+            <!-- RIGHT SIDEBAR COLUMN: Response Notice Details -->
+            <section class="inquiry-sidebar">
+                <div class="sidebar-card">
+                    <h4>Response Turnaround</h4>
+                    <p>We review all catering and event bookings daily. Our stall team will contact you back via phone or email within <strong>12 to 24 hours</strong> to verify menu availability and layout deposit options.</p>
+                    
+                    <!-- Styled details list layout -->
+                    <ul class="bullet-list">
+                        <li><strong>✓</strong> Freshly baked collections</li>
+                        <li><strong>✓</strong> Secure box transport packaging</li>
+                        <li><strong>✓</strong> Daveyton local vicinity drops</li>
+                    </ul>
+                </div>
+            </section>
+
+        </div> <!-- Closes menu-container -->
     </main>
 
-    <!-- Structural site footer displaying copyright status and creation year -->
+    <!-- Consistent Structural Site Footer -->
     <footer>
-        <p>Footer: &copy; 2026 Thembi's Kitchen. All rights reserved.</p>
+        <p>&copy; 2026 Thembi's Kitchen. All rights reserved.</p>
     </footer>
 
 </body>

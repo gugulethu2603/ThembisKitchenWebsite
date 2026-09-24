@@ -1,5 +1,5 @@
 /* ==========================================================================
-   1. CSS RESET & BROWSER RENDERING CONSISTENCY
+   1. CSS RESET & GLOBAL BASICS
    ========================================================================== */
 *, *::before, *::after {
     box-sizing: border-box;
@@ -7,9 +7,12 @@
     padding: 0;
 }
 
-html, body {
-    height: 100%;
-    width: 100%;
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    background-color: #fffaf4; /* High-vibrancy warm sun-kissed gold cream backdrop */
+    color: #1a252f;
+    line-height: 1.6;
 }
 
 img {
@@ -18,68 +21,28 @@ img {
 }
 
 /* ==========================================================================
-   2. VIBRANT BRAND TYPOGRAPHY & ENERGETIC BACKGROUNDS
-   ========================================================================== */
-body {
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-    font-size: 16px;
-    background-color: #fffaf4; /* Vibrant, warm cream-gold background tint */
-    color: #1a252f;            /* Sharp high-contrast dark text */
-    line-height: 1.6;          
-}
-
-h1 {
-    font-size: 2rem;
-    font-weight: 800;
-    letter-spacing: 1.5px;
-    color: #e74c3c;            /* Rich, vibrant culinary tomato red */
-}
-
-h2 {
-    font-size: 2.6rem;
-    font-weight: 800;
-    color: #e74c3c;            /* Bold vibrant section titles */
-    letter-spacing: -0.5px;
-    margin-bottom: 0.5rem;
-}
-
-h3 {
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: #d35400;            /* Warm energetic orange subtitles */
-    margin-bottom: 1.5rem;
-}
-
-h4 {
-    font-size: 1.6rem;
-    font-weight: 800;
-    color: #e74c3c; 
-    margin-bottom: 1rem;
-}
-
-p {
-    font-size: 1.2rem;
-    color: #2c3e50;            /* Bright, highly legible content text */
-    font-weight: 500;
-}
-
-/* ==========================================================================
-   3. HIGH-VIBRANCY NAVIGATION HEADER (Flexbox Layout)
+   2. HIGH-CONTRAST FLEXBOX NAVIGATION HEADER
    ========================================================================== */
 header {
     background-color: #ffffff;
-    border-bottom: 5px solid #e74c3c; /* Sharp red accent bar */
-    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.08); /* Warm glowing shadow */
+    border-bottom: 5px solid #e74c3c; /* Tomato-red vibrant header bar */
+    box-shadow: 0 4px 20px rgba(231, 76, 60, 0.1);
 }
 
 .header-container {
-    display: flex;                  
-    flex-direction: row;            
-    justify-content: space-between; 
-    align-items: center;            
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 1.5rem 2rem;
+}
+
+.header-container h1 {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #e74c3c;
+    letter-spacing: 1px;
 }
 
 nav ul {
@@ -93,285 +56,305 @@ nav ul li a {
     color: #2c3e50;
     font-weight: 700;
     font-size: 0.95rem;
-    padding: 0.6rem 1rem;
+    padding: 0.6rem 1.1rem;
     border-radius: 6px;
     text-transform: uppercase;
-    transition: all 0.2s ease-in-out;
-}
-
-/* Bright hover changes */
-nav ul li a:hover {
-    color: #e74c3c;
-    background-color: #ffeef0; 
-}
-
-nav ul li a:focus {
-    outline: 3px dashed #e74c3c; 
-    outline-offset: 4px;
-}
-
-/* Highly visible active selected button */
-nav ul li a.active {
-    color: #ffffff;
-    background-color: #e74c3c;  
-    box-shadow: 0 4px 10px rgba(231, 76, 60, 0.2);
-}
-
-/* ==========================================================================
-   4. TWO-COLUMN RESPONSIVE LAYOUT GRID (.menu-container)
-   ========================================================================== */
-.menu-title {
-    text-align: center;
-    font-size: 2.4rem;
-    color: #1a252f;
-    margin: 3.5rem auto 1rem auto;
-    font-weight: 900;
-}
-
-.menu-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Splits screen cleanly into 2 columns */
-    gap: 3.5rem;                   
-    max-width: 1200px;
-    margin: 2rem auto 5rem auto;
-    padding: 0 2rem;
-    align-items: start;
-}
-
-/* Bright, clean column separation header tracks */
-.left-menu::before {
-    content: "🍳 Breakfast Menu";
-    display: block;
-    font-size: 1.6rem;
-    font-weight: 800;
-    color: #d35400;
-    margin-bottom: 1.5rem;
-    border-bottom: 3px solid #ffeef0;
-    padding-bottom: 0.5rem;
-}
-
-.right-menu::before {
-    content: "🍲 Lunch Menu (From 11:00 AM)";
-    display: block;
-    font-size: 1.6rem;
-    font-weight: 800;
-    color: #e74c3c;
-    margin-bottom: 1.5rem;
-    border-bottom: 3px solid #ffeef0;
-    padding-bottom: 0.5rem;
-}
-
-/* ==========================================================================
-   5. CRISP PRESENTATION CARDS & HOVER EFFECTS
-   ========================================================================== */
-.menu-item, .sidebar-card {
-    display: flex;
-    gap: 1.5rem;
-    background-color: #ffffff;
-    padding: 1.75rem;
-    border-radius: 12px;
-    border: 2px solid #ffebd4;   /* Warm crisp layout border parameter */
-    box-shadow: 0 6px 18px rgba(211, 84, 0, 0.04);
-    margin-bottom: 1.75rem;
-    align-items: center;
-    transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.25s ease;
-}
-
-/* Fun popping lift effect for interaction feedback marks */
-.menu-item:hover {
-    transform: translateY(-4px); 
-    box-shadow: 0 12px 24px rgba(211, 84, 0, 0.09);
-    border-color: #e74c3c;
-}
-
-.lunch-card {
-    border-left: 6px solid #e74c3c; /* Striking tomato-red lunch marker */
-}
-
-.menu-item-img, .responsive-stall-img {
-    flex: 0 0 140px;
-    width: 140px;
-    height: 110px;
-    border-radius: 8px;
-    object-fit: cover;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-.responsive-stall-img {
-    max-width: 650px;
-    height: auto;
-}
-
-.item-details {
-    flex: 1;
-}
-
-.item-details h3 {
-    font-size: 1.4rem;
-    color: #1a252f;
-    margin-bottom: 0.35rem;
-    font-weight: 700;
-}
-
-.item-details p {
-    font-size: 1rem;
-    color: #5d6d7e;
-    margin-bottom: 0.5rem;
-}
-
-/* Bright, energetic badge layout for pricing markers */
-.menu-item-price {
-    display: inline-block;
-    font-size: 1.2rem;
-    font-weight: 800;
-    color: #ffffff;
-    background-color: #e74c3c; /* Vibrant solid price tag text block */
-    padding: 0.3rem 0.8rem;
-    border-radius: 6px;
-    box-shadow: 0 3px 8px rgba(231, 76, 60, 0.2);
-}
-
-/* ==========================================================================
-   6. CONTACT & UTILITY SPECIFIC PRESENTATIONS
-   ========================================================================== */
-.contact-subtitle {
-    font-size: 1.6rem;
-    font-weight: 800;
-    color: #d35400;
-    margin-top: -0.5rem;
-    margin-bottom: 2rem;
-    letter-spacing: 1px;
-}
-
-.contact-info-list {
-    list-style: none;
-    margin-top: 1.25rem;
-}
-
-.contact-info-list li {
-    font-size: 1.2rem;
-    color: #1a252f;
-    padding: 0.85rem 0;
-    border-bottom: 2px dashed #ffebd4;
-}
-
-.contact-info-list li:last-child {
-    border-bottom: none;
-}
-
-/* ==========================================================================
-   7. INQUIRY FORM DESIGN & DYNAMIC FOCUS GLOWS (Requirement 2.4 / 2.5)
-   ========================================================================== */
-.styled-form-container {
-    background-color: #ffffff;
-    padding: 2.5rem;
-    border-radius: 12px;
-    border: 2px solid #ffebd4;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.02);
-}
-
-.form-group {
-    margin-bottom: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.form-group label {
-    font-weight: 700;
-    color: #1a252f;
-    font-size: 1rem;
-}
-
-.form-group input, .form-group textarea {
-    width: 100%;
-    padding: 0.85rem 1.15rem;
-    font-family: inherit;
-    font-size: 1.05rem;
-    border: 2px solid #dcdde1;
-    border-radius: 6px;
-    background-color: #fffcf9;
-    transition: all 0.25s ease-in-out;
-}
-
-/* Bright interactive active focus state */
-.form-group input:focus, .form-group textarea:focus {
-    outline: none;
-    border-color: #e74c3c; 
-    background-color: #ffffff;
-    box-shadow: 0 0 0 4px rgba(231, 76, 60, 0.15);
-}
-
-.form-submit-btn {
-    background-color: #e74c3c;
-    color: #ffffff;
-    border: none;
-    padding: 1rem 2.5rem;
-    font-size: 1.1rem;
-    font-weight: 800;
-    border-radius: 6px;
-    cursor: pointer;
-    text-transform: uppercase;
-    letter-spacing: 0.75px;
-    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.2);
     transition: all 0.2s ease;
 }
 
-.form-submit-btn:hover {
-    background-color: #c0392b;
-    transform: translateY(-1px);
-    box-shadow: 0 6px 15px rgba(231, 76, 60, 0.3);
+nav ul li a:hover {
+    color: #e74c3c;
+    background-color: #ffeef0;
 }
 
-.form-submit-btn:active {
-    transform: scale(0.97);
+nav ul li a.active {
+    color: #ffffff;
+    background-color: #e74c3c;
+    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.25);
 }
 
 /* ==========================================================================
-   8. CLEAN STRUCTURAL DEEPLY CONTRASTED FOOTER
+   3. GIANT LIVING HERO IMAGE & FLOATING TIMETABLE INTERFACE (index.html)
+   ========================================================================== */
+.homepage-showcase-container {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+}
+
+/* Massive Living Image Frame Wrapper */
+.hero-image-giant-frame {
+    position: relative;
+    width: 100%;
+    height: 520px; /* Forces image window to be prominent and large */
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(211, 84, 0, 0.15);
+    border: 3px solid #ffffff;
+}
+
+.giant-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps image sharp and perfectly proportioned */
+    transition: transform 0.5s ease;
+}
+
+.hero-image-giant-frame:hover .giant-hero-img {
+    transform: scale(1.03); /* Soft lens zoom motion to make image feel alive */
+}
+
+/* Elegant Frosted Translucent Text Overlay Card */
+.hero-text-overlay-card {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.85)); /* Smooth gradient mesh */
+    padding: 3rem 2.5rem;
+    color: #ffffff;
+}
+
+.hero-text-overlay-card h2 {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    margin-bottom: 0.5rem;
+}
+
+.hero-text-overlay-card h3 {
+    font-size: 1.5rem;
+    color: #ffebd4;
+    font-weight: 500;
+}
+
+/* Nicely Formatted Floating Operating Hours Card Block */
+.floating-timetable-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.vibrant-hours-card {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 550px;
+    padding: 2.5rem;
+    border-radius: 16px;
+    border: 3px solid #ffebd4; /* Sharp elegant tracking border layout */
+    box-shadow: 0 10px 30px rgba(211, 84, 0, 0.08); /* Ambient floating layout effect shadow */
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.vibrant-hours-card:hover {
+    transform: translateY(-5px); /* Floating action gesture on hover */
+    border-color: #e74c3c;
+}
+
+.vibrant-hours-card h4 {
+    font-size: 1.7rem;
+    font-weight: 900;
+    color: #e74c3c;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #ffebd4;
+    padding-bottom: 0.75rem;
+}
+
+.vibrant-hours-card ul {
+    list-style: none;
+}
+
+.vibrant-hours-card ul li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    font-size: 1.2rem;
+    color: #2c3e50;
+    border-bottom: 1px dashed #ffebd4;
+}
+
+.vibrant-hours-card ul li:last-child {
+    border-bottom: none;
+}
+
+.vibrant-hours-card ul li span {
+    font-weight: 700;
+    color: #27ae60; /* Clear bright green for active hours */
+}
+
+.vibrant-hours-card ul li .closed-label {
+    color: #e74c3c; /* Clear deep red for closed tracking paths */
+}
+
+/* ==========================================================================
+   4. MODERN NON-BOOK CARDS LAYOUT MATRIX (aboutUs.html)
+   ========================================================================== */
+.about-cards-layout {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.page-main-title {
+    text-align: center;
+    font-size: 2.6rem;
+    font-weight: 900;
+    color: #e74c3c;
+    margin-bottom: 3rem;
+}
+
+.about-grid-matrix {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Splitting the sections cleanly side-by-side */
+    gap: 2.5rem;
+}
+
+/* Individual Interactive Card Boxes */
+.modern-about-card {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 16px;
+    border: 2px solid #ffebd4;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.02);
+    transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.25s ease;
+}
+
+.modern-about-card:hover {
+    transform: translateY(-5px);
+    border-color: #e74c3c;
+    box-shadow: 0 12px 28px rgba(211, 84, 0, 0.08);
+}
+
+.card-icon-header {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.modern-about-card h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #e74c3c;
+    margin-bottom: 1rem;
+}
+
+.modern-about-card p {
+    font-size: 1.15rem;
+    color: #2c3e50;
+}
+
+/* Featured wider mission card layout row parameter mapping */
+.featured-mission-card {
+    grid-column: span 2; /* Stretches card fully across both columns for visual contrast break */
+    border-left: 6px solid #e74c3c;
+}
+
+.styled-bullet-row {
+    list-style: none;
+    margin-top: 1.5rem;
+}
+
+.styled-bullet-row li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #2c3e50;
+}
+
+.styled-bullet-row li::before {
+    content: "🔥";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 1.1rem;
+}
+
+/* ==========================================================================
+   5. UNIFIED EXTRA RULES FOR PREVIOUS PAGES (Services, Contact, Inquiry)
+   ========================================================================== */
+.menu-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.menu-item {
+    display: flex;
+    gap: 1.5rem;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 2px solid #ffebd4;
+    margin-bottom: 1.5rem;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+}
+
+.menu-item-img {
+    flex: 0 0 130px;
+    width: 130px;
+    height: 100px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.menu-item-price {
+    display: inline-block;
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #ffffff;
+    background-color: #e74c3c;
+    padding: 0.25rem 0.65rem;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+}
+
+/* ==========================================================================
+   6. GLOBAL STRUCTURAL DEEP SOLID FOOTER
    ========================================================================== */
 footer {
-    background-color: #1a252f; /* Deep structural solid footer block tracking */
+    background-color: #1a252f;
     color: #ffffff;
     text-align: center;
-    padding: 1.75rem;
-    margin-top: 6rem;
+    padding: 2rem;
+    margin-top: 8rem;
     font-size: 1rem;
     font-weight: 600;
-    letter-spacing: 0.5px;
 }
 
 /* ==========================================================================
-   9. MOBILE RESPONSIVE MEDIA VIEWPORTS (Requirement Section 3.1)
+   7. RESPONSIVE MOBILE ARCHITECTURE ENGINE
    ========================================================================== */
 @media (max-width: 768px) {
     .header-container {
         flex-direction: column;
         gap: 1.25rem;
-        text-align: center;
     }
 
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.75rem;
+    .hero-image-giant-frame {
+        height: 320px;
+    }
+
+    .hero-text-overlay-card h2 {
+        font-size: 1.8rem;
+    }
+
+    .about-grid-matrix {
+        grid-template-columns: 1fr; /* Stacks grids vertically into clean columns on phone screens */
+    }
+
+    .featured-mission-card {
+        grid-column: span 1;
     }
 
     .menu-container {
         grid-template-columns: 1fr;
-        gap: 2.5rem;
-        padding: 0 1rem;
-    }
-
-    .menu-item {
-        flex-direction: column;
-        text-align: center;
-        padding: 1.5rem;
-    }
-
-    .menu-item-img {
-        flex: 1;
-        width: 100%;
-        height: 160px;
     }
 }

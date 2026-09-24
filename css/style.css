@@ -18,57 +18,58 @@ img {
 }
 
 /* ==========================================================================
-   2. GLOBAL BRAND TYPOGRAPHY & BASE COLORS
+   2. VIBRANT BRAND TYPOGRAPHY & ENERGETIC BACKGROUNDS
    ========================================================================== */
 body {
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
     font-size: 16px;
-    background-color: #fdfbfc; /* Warm light palette tint */
-    color: #2c3e50;            /* Professional deep contrast text color */
+    background-color: #fffaf4; /* Vibrant, warm cream-gold background tint */
+    color: #1a252f;            /* Sharp high-contrast dark text */
     line-height: 1.6;          
 }
 
 h1 {
-    font-size: 1.8rem;
-    font-weight: 700;
-    letter-spacing: 1px;       /* Proportional letter-spacing layout metric */
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: #e74c3c;            /* Rich, vibrant culinary tomato red */
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 2.6rem;
     font-weight: 800;
-    color: #2c3e50;
+    color: #e74c3c;            /* Bold vibrant section titles */
     letter-spacing: -0.5px;
     margin-bottom: 0.5rem;
 }
 
 h3 {
-    font-size: 1.35rem;
-    font-weight: 400;
-    color: #7f8c8d;
-    font-style: italic;
-    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #d35400;            /* Warm energetic orange subtitles */
+    margin-bottom: 1.5rem;
 }
 
 h4 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #d35400;             /* Brand accent culinary orange */
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #e74c3c; 
     margin-bottom: 1rem;
 }
 
 p {
-    font-size: 1.15rem;
-    color: #555;
+    font-size: 1.2rem;
+    color: #2c3e50;            /* Bright, highly legible content text */
+    font-weight: 500;
 }
 
 /* ==========================================================================
-   3. UNIFIED NAVIGATION HEADER (Flexbox Alignment)
+   3. HIGH-VIBRANCY NAVIGATION HEADER (Flexbox Layout)
    ========================================================================== */
 header {
     background-color: #ffffff;
-    border-bottom: 4px solid #d35400; 
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); 
+    border-bottom: 5px solid #e74c3c; /* Sharp red accent bar */
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.08); /* Warm glowing shadow */
 }
 
 .header-container {
@@ -78,7 +79,7 @@ header {
     align-items: center;            
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1.25rem 2rem;
+    padding: 1.5rem 2rem;
 }
 
 nav ul {
@@ -89,44 +90,47 @@ nav ul {
 
 nav ul li a {
     text-decoration: none;
-    color: #34495e;
-    font-weight: 600;
-    font-size: 0.9rem;
-    padding: 0.5rem 0.75rem;
-    border-radius: 4px;
+    color: #2c3e50;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
     text-transform: uppercase;
     transition: all 0.2s ease-in-out;
 }
 
+/* Bright hover changes */
 nav ul li a:hover {
-    color: #d35400;
-    background-color: #fdf2e9; 
+    color: #e74c3c;
+    background-color: #ffeef0; 
 }
 
 nav ul li a:focus {
-    outline: 2px dashed #d35400; 
+    outline: 3px dashed #e74c3c; 
     outline-offset: 4px;
 }
 
-nav ul li a:active, nav ul li a.active {
+/* Highly visible active selected button */
+nav ul li a.active {
     color: #ffffff;
-    background-color: #d35400;  
+    background-color: #e74c3c;  
+    box-shadow: 0 4px 10px rgba(231, 76, 60, 0.2);
 }
 
 /* ==========================================================================
-   4. CENTRAL RESPONSIVE GRID LAYOUT ARCHITECTURE (.menu-container)
+   4. TWO-COLUMN RESPONSIVE LAYOUT GRID (.menu-container)
    ========================================================================== */
 .menu-title {
     text-align: center;
-    font-size: 2.2rem;
-    color: #2c3e50;
-    margin: 3rem auto 1rem auto;
-    font-weight: 800;
+    font-size: 2.4rem;
+    color: #1a252f;
+    margin: 3.5rem auto 1rem auto;
+    font-weight: 900;
 }
 
 .menu-container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Activates two side-by-side equal columns */
+    grid-template-columns: 1fr 1fr; /* Splits screen cleanly into 2 columns */
     gap: 3.5rem;                   
     max-width: 1200px;
     margin: 2rem auto 5rem auto;
@@ -134,60 +138,68 @@ nav ul li a:active, nav ul li a.active {
     align-items: start;
 }
 
-/* Column Header Dynamic Badges */
+/* Bright, clean column separation header tracks */
 .left-menu::before {
-    content: "Breakfast Items";
+    content: "🍳 Breakfast Menu";
     display: block;
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 1.6rem;
+    font-weight: 800;
     color: #d35400;
     margin-bottom: 1.5rem;
-    border-bottom: 2px solid #fdf2e9;
+    border-bottom: 3px solid #ffeef0;
     padding-bottom: 0.5rem;
 }
 
 .right-menu::before {
-    content: "Lunch Items (Served from 11:00 AM)";
+    content: "🍲 Lunch Menu (From 11:00 AM)";
     display: block;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #2c3e50;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #e74c3c;
     margin-bottom: 1.5rem;
-    border-bottom: 2px solid #eef2f3;
+    border-bottom: 3px solid #ffeef0;
     padding-bottom: 0.5rem;
 }
 
 /* ==========================================================================
-   5. PRESENTATION ITEM CARDS
+   5. CRISP PRESENTATION CARDS & HOVER EFFECTS
    ========================================================================== */
-.menu-item {
+.menu-item, .sidebar-card {
     display: flex;
     gap: 1.5rem;
     background-color: #ffffff;
-    padding: 1.5rem;
-    border-radius: 8px;
-    border: 1px solid #eef2f3;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-    margin-bottom: 1.5rem;
+    padding: 1.75rem;
+    border-radius: 12px;
+    border: 2px solid #ffebd4;   /* Warm crisp layout border parameter */
+    box-shadow: 0 6px 18px rgba(211, 84, 0, 0.04);
+    margin-bottom: 1.75rem;
     align-items: center;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.25s ease;
 }
 
+/* Fun popping lift effect for interaction feedback marks */
 .menu-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    transform: translateY(-4px); 
+    box-shadow: 0 12px 24px rgba(211, 84, 0, 0.09);
+    border-color: #e74c3c;
 }
 
 .lunch-card {
-    border-left: 4px solid #2c3e50; 
+    border-left: 6px solid #e74c3c; /* Striking tomato-red lunch marker */
 }
 
-.menu-item-img {
+.menu-item-img, .responsive-stall-img {
     flex: 0 0 140px;
     width: 140px;
     height: 110px;
-    border-radius: 6px;
+    border-radius: 8px;
     object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.responsive-stall-img {
+    max-width: 650px;
+    height: auto;
 }
 
 .item-details {
@@ -195,42 +207,37 @@ nav ul li a:active, nav ul li a.active {
 }
 
 .item-details h3 {
-    font-size: 1.25rem;
-    color: #2c3e50;
-    margin-bottom: 0.25rem;
+    font-size: 1.4rem;
+    color: #1a252f;
+    margin-bottom: 0.35rem;
+    font-weight: 700;
 }
 
 .item-details p {
-    font-size: 0.95rem;
-    color: #7f8c8d;
+    font-size: 1rem;
+    color: #5d6d7e;
     margin-bottom: 0.5rem;
 }
 
+/* Bright, energetic badge layout for pricing markers */
 .menu-item-price {
     display: inline-block;
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #d35400;
-    background-color: #fdf2e9;
-    padding: 0.2rem 0.6rem;
-    border-radius: 4px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #ffffff;
+    background-color: #e74c3c; /* Vibrant solid price tag text block */
+    padding: 0.3rem 0.8rem;
+    border-radius: 6px;
+    box-shadow: 0 3px 8px rgba(231, 76, 60, 0.2);
 }
 
 /* ==========================================================================
-   6. CONTACT & ABOUT SPECIFIC CONTENT UTILITIES
+   6. CONTACT & UTILITY SPECIFIC PRESENTATIONS
    ========================================================================== */
-.sidebar-card {
-    background-color: #ffffff;
-    padding: 2rem;
-    border-radius: 8px;
-    border: 1px solid #eef2f3;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
-}
-
 .contact-subtitle {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #7f8c8d;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #d35400;
     margin-top: -0.5rem;
     margin-bottom: 2rem;
     letter-spacing: 1px;
@@ -242,10 +249,10 @@ nav ul li a:active, nav ul li a.active {
 }
 
 .contact-info-list li {
-    font-size: 1.15rem;
-    color: #2c3e50;
-    padding: 0.75rem 0;
-    border-bottom: 1px dashed #eef2f3;
+    font-size: 1.2rem;
+    color: #1a252f;
+    padding: 0.85rem 0;
+    border-bottom: 2px dashed #ffebd4;
 }
 
 .contact-info-list li:last-child {
@@ -253,14 +260,14 @@ nav ul li a:active, nav ul li a.active {
 }
 
 /* ==========================================================================
-   7. INQUIRY USER INTERACTIVE FORM UI ELEMENTS (Requirement 2.5)
+   7. INQUIRY FORM DESIGN & DYNAMIC FOCUS GLOWS (Requirement 2.4 / 2.5)
    ========================================================================== */
 .styled-form-container {
     background-color: #ffffff;
-    padding: 2rem;
-    border-radius: 8px;
-    border: 1px solid #eef2f3;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 2px solid #ffebd4;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.02);
 }
 
 .form-group {
@@ -271,74 +278,67 @@ nav ul li a:active, nav ul li a.active {
 }
 
 .form-group label {
-    font-weight: 600;
-    color: #2c3e50;
-    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1a252f;
+    font-size: 1rem;
 }
 
 .form-group input, .form-group textarea {
     width: 100%;
-    padding: 0.75rem 1rem;
+    padding: 0.85rem 1.15rem;
     font-family: inherit;
-    font-size: 1rem;
-    border: 1px solid #dcdde1;
-    border-radius: 4px;
-    background-color: #fcfbfa;
+    font-size: 1.05rem;
+    border: 2px solid #dcdde1;
+    border-radius: 6px;
+    background-color: #fffcf9;
     transition: all 0.25s ease-in-out;
 }
 
-/* Focus interactive pseudo-classes rule */
+/* Bright interactive active focus state */
 .form-group input:focus, .form-group textarea:focus {
     outline: none;
-    border-color: #d35400; 
+    border-color: #e74c3c; 
     background-color: #ffffff;
-    box-shadow: 0 0 0 3px rgba(211, 84, 0, 0.1);
+    box-shadow: 0 0 0 4px rgba(231, 76, 60, 0.15);
 }
 
 .form-submit-btn {
-    background-color: #d35400;
+    background-color: #e74c3c;
     color: #ffffff;
     border: none;
-    padding: 0.85rem 2rem;
-    font-size: 1rem;
-    font-weight: 700;
-    border-radius: 4px;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 800;
+    border-radius: 6px;
     cursor: pointer;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.75px;
+    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.2);
     transition: all 0.2s ease;
 }
 
 .form-submit-btn:hover {
-    background-color: #b34500;
-    box-shadow: 0 4px 12px rgba(211, 84, 0, 0.2);
+    background-color: #c0392b;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(231, 76, 60, 0.3);
 }
 
 .form-submit-btn:active {
-    transform: scale(0.98);
-}
-
-.bullet-list {
-    list-style: none;
-    margin-top: 1rem;
-}
-
-.bullet-list li {
-    font-size: 1rem;
-    padding: 0.4rem 0;
-    color: #555;
+    transform: scale(0.97);
 }
 
 /* ==========================================================================
-   8. UNIFIED GLOBAL LAYOUT FOOTER
+   8. CLEAN STRUCTURAL DEEPLY CONTRASTED FOOTER
    ========================================================================== */
 footer {
-    background-color: #2c3e50;
+    background-color: #1a252f; /* Deep structural solid footer block tracking */
     color: #ffffff;
     text-align: center;
-    padding: 1.5rem;
-    margin-top: 5rem;
-    font-size: 0.9rem;
+    padding: 1.75rem;
+    margin-top: 6rem;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
 /* ==========================================================================
@@ -358,20 +358,20 @@ footer {
     }
 
     .menu-container {
-        grid-template-columns: 1fr; /* Stacks layout fields cleanly down single vertical columns */
-        gap: 2rem;
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
         padding: 0 1rem;
     }
 
     .menu-item {
         flex-direction: column;
         text-align: center;
-        padding: 1.25rem;
+        padding: 1.5rem;
     }
 
     .menu-item-img {
         flex: 1;
         width: 100%;
-        height: 150px;
+        height: 160px;
     }
 }

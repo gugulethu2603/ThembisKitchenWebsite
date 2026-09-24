@@ -1,6 +1,6 @@
 /* ==========================================================================
    1. CSS RESET & INITIALIZATION 
-   ========================================================================== */
+   */
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -18,7 +18,7 @@ img {
 
 /* ==========================================================================
    2. TYPOGRAPHY SCALES & CASCADING PROPERTIES 
-   ========================================================================== */
+    */
 body {
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
     font-size: 16px;
@@ -58,8 +58,8 @@ h4 {
 }
 
 /* ==========================================================================
-   3. DESKTOP FLEXBOX & GRID ARCHITECTURE (Requirement 2.4)
-   ========================================================================== */
+   3. DESKTOP FLEXBOX & GRID ARCHITECTURE
+    */
 
 /* Flexbox Header Container Layout */
 header {
@@ -183,7 +183,7 @@ footer {
 
 /* ==========================================================================
    4. RESPONSIVE MEDIA BREAKPOINTS 
-   ========================================================================== */
+   */
 
 /* Collapses layout properties seamlessly when window screen width passes under 768px */
 @media (max-width: 768px) {
@@ -220,7 +220,7 @@ footer {
 
 /* ==========================================================================
    10. CONTACT PAGE LAYOUT SPACING UTILITIES
-   ========================================================================== */
+    */
 .contact-info-list {
     list-style: none;
     margin-top: 1rem;
@@ -295,4 +295,69 @@ footer {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
+}
+/* ==========================================================================
+   INQUIRY FORM DESIGN & PSEUDO-CLASSES
+    */
+.styled-form-container {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid #eef2f3;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 0.95rem;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-family: inherit;
+    font-size: 1rem;
+    border: 1px solid #dcdde1;
+    border-radius: 4px;
+    background-color: #fcfbfa;
+    transition: all 0.25s ease-in-out;
+}
+
+/* Interactive focus glow highlight selector rule */
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #d35400; /* brand culinary accent orange */
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(211, 84, 0, 0.1);
+}
+
+.form-submit-btn {
+    background-color: #d35400;
+    color: #ffffff;
+    border: none;
+    padding: 0.85rem 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
+}
+
+.form-submit-btn:hover {
+    background-color: #b34500;
+    box-shadow: 0 4px 12px rgba(211, 84, 0, 0.2);
+}
+
+.form-submit-btn:active {
+    transform: scale(0.98);
 }

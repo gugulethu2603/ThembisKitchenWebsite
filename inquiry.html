@@ -36,7 +36,7 @@
             
             <!-- LEFT COLUMN: Interactive User Form Input Section -->
             <section class="inquiry-form-section">
-                <form action="#" method="POST" class="styled-form-container">
+                <form id="inquryForm" action="#"method="POST" class="styled-form-container">
                     
                     <div class="form-group">
                         <label for="username">Your Full Name:</label>
@@ -52,6 +52,7 @@
                         <label for="inquiringtext">Your Inquiry Details:</label>
                         <textarea id="inquiringtext" name="inquiringtext" rows="6" placeholder="Tell us how many scones, cupcakes, or traditional lunch platters you would like to book for your function..." required></textarea>
                     </div>
+                    <p id="formMessage"></p>
 
                     <button type="submit" class="form-submit-btn">Submit Inquiry</button>
                 </form>

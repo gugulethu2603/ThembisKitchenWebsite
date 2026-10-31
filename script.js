@@ -24,3 +24,21 @@ document.getElementById("testButton").addEventListener("click", function () {
     message.style.color = "green";
     message.textContent = "Inquiry submitted successfully!";
 });
+
+const accordions = document.querySelectorAll(".accordion");
+
+accordions.forEach(function(button) {
+
+    button.addEventListener("click", function() {
+
+        const panel = this.nextElementSibling;
+
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+
+    });
+
+});

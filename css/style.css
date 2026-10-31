@@ -309,3 +309,20 @@ footer {
         margin: 2rem auto;
     }
 }
+
+.accordion {
+    width: 100%;
+    padding: 15px;
+    background-color: #8B5E3C;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.panel {
+    display: none;
+    overflow: hidden;
+}

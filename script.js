@@ -6,21 +6,21 @@ document.getElementById("testButton").addEventListener("click", function () {
 
     let message = document.getElementById("formMessage");
 
-    // Check for empty fields
     if (name === "" || email === "" || inquiry === "") {
         message.style.color = "red";
         message.textContent = "Please complete all fields.";
         return;
     }
 
-    // Check email format
-    if (!email.includes("@") || !email.includes(".")) {
+    // Email format validation
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailPattern.test(email)) {
         message.style.color = "red";
         message.textContent = "Please enter a valid email address.";
         return;
     }
 
-    // Success message
     message.style.color = "green";
     message.textContent = "Inquiry submitted successfully!";
 });

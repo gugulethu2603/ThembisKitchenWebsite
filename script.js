@@ -1,3 +1,4 @@
+alert("Javascript is running");
 document.getElementById("inquiryForm").addEventListener("submit", function(event) {
 
     event.preventDefault();

@@ -1,1 +1,3 @@
-alert ("Welcome to Thembi's Kitchen");
+document.getElementById("testBtn").addEventListener("click", function()
+{alert ("Thank you for visiting Thembi's Kitchen!");
+});

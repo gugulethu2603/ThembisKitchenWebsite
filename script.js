@@ -1,29 +1,39 @@
-document.getElementById("testButton").addEventListener("click", function () {
+// INQUIRY FORM VALIDATION
 
-    let name = document.getElementById("username").value.trim();
-    let email = document.getElementById("useremail").value.trim();
-    let inquiry = document.getElementById("inquiringtext").value.trim();
+const testButton = document.getElementById("testButton");
 
-    let message = document.getElementById("formMessage");
+if (testButton) {
 
-    if (name === "" || email === "" || inquiry === "") {
-        message.style.color = "red";
-        message.textContent = "Please complete all fields.";
-        return;
-    }
+    testButton.addEventListener("click", function () {
 
-    // Email format validation
-    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        let name = document.getElementById("username").value.trim();
+        let email = document.getElementById("useremail").value.trim();
+        let inquiry = document.getElementById("inquiringtext").value.trim();
 
-    if (!emailPattern.test(email)) {
-        message.style.color = "red";
-        message.textContent = "Please enter a valid email address.";
-        return;
-    }
+        let message = document.getElementById("formMessage");
 
-    message.style.color = "green";
-    message.textContent = "Inquiry submitted successfully!";
-});
+        if (name === "" || email === "" || inquiry === "") {
+            message.style.color = "red";
+            message.textContent = "Please complete all fields.";
+            return;
+        }
+
+        let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailPattern.test(email)) {
+            message.style.color = "red";
+            message.textContent = "Please enter a valid email address.";
+            return;
+        }
+
+        message.style.color = "green";
+        message.textContent = "Inquiry submitted successfully!";
+    });
+
+}
+
+
+// ACCORDION
 
 const accordions = document.querySelectorAll(".accordion");
 

@@ -97,3 +97,27 @@ markdown
 *   Coyier, C. 2024. *A Complete Guide to Flexbox*. Available at: https://css-tricks.com [Accessed 25 September 2026].
 *   House, K. 2023. *A Complete Guide to CSS Grid*. Available at: https://css-tricks.com [Accessed 25 September 2026].
 *   MDN Web Docs. 2026. *CSS: Cascading Style Sheets*. Mozilla Developer Network. Available at: https://mozilla.org [Accessed 25 September 2026].
+
+
+
+# Part 3 Changelog
+
+## JavaScript Enhancements
+- Added inquiry form validation.
+- Added email format validation.
+- Added user feedback messages.
+- Added Breakfast and Lunch accordion menus.
+- Added menu search functionality.
+- Added Today's Special modal popup.
+- Added interactive Leaflet map.
+
+## SEO Improvements
+- Added unique page titles.
+- Added meta descriptions.
+- Added robots.txt file.
+- Added sitemap.xml file.
+
+## User Experience Improvements
+- Improved navigation menu.
+- Enhanced responsiveness across devices.
+- Improved menu interaction and usability.

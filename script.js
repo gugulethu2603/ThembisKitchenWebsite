@@ -99,3 +99,28 @@ if (mapContainer) {
         .bindPopup("Thembi's Kitchen - Daveyton Taxi Rank")
         .openPopup();
 }
+
+// MODAL POPUP
+
+const modal = document.getElementById("specialModal");
+const btn = document.getElementById("specialBtn");
+const closeBtn = document.querySelector(".close");
+
+if (btn && modal && closeBtn) {
+
+    btn.addEventListener("click", function() {
+        modal.style.display = "block";
+    });
+
+    closeBtn.addEventListener("click", function() {
+        modal.style.display = "none";
+    });
+
+    window.addEventListener("click", function(event) {
+
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+
+    });
+}

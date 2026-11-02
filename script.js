@@ -51,4 +51,33 @@ accordions.forEach(function(button) {
 
     });
 
-});
+}); 
+
+
+// MENU SEARCH FUNCTION
+
+const searchBox = document.getElementById("menuSearch");
+
+if (searchBox) {
+
+    searchBox.addEventListener("keyup", function () {
+
+        let searchValue = this.value.toLowerCase();
+
+        let menuItems = document.querySelectorAll(".menu-item");
+
+        menuItems.forEach(function (item) {
+
+            let text = item.textContent.toLowerCase();
+
+            if (text.includes(searchValue)) {
+                item.style.display = "block";
+            } else {
+                item.style.display = "none";
+            }
+
+        });
+
+    });
+
+}

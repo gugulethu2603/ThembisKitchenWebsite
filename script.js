@@ -81,3 +81,21 @@ if (searchBox) {
     });
 
 }
+
+// LEAFLET MAP
+
+const mapContainer = document.getElementById("map");
+
+if (mapContainer) {
+
+    const map = L.map('map').setView([-26.145, 28.420], 13);
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19
+    }).addTo(map);
+
+    L.marker([-26.145, 28.420])
+        .addTo(map)
+        .bindPopup("Thembi's Kitchen - Daveyton Taxi Rank")
+        .openPopup();
+}
